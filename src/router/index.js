@@ -5,10 +5,13 @@ import LifeCycle from '@/components/pages/life-cycle'
 import TemplateSyntax from '@/components/pages/template-syntax'
 import HttpAxios from '@/components/pages/http-axios'
 import Component from '@/components/pages/component'
-import ComponentCommunication from '@/components/pages/component-communication'
 import VueRouter from '@/components/pages/vue-router'
 import TheHeader from '@/components/layouts/TheHeader'
 import TheFooter from '@/components/layouts/TheFooter'
+import LowerComponent from '@/components/router-view/lower-component'
+import LowerComponent2 from '@/components/router-view/lower-component2'
+import UpperComponent from '@/components/router-view/upper-component'
+import NamedView from '@/components/router-view/named-view'
 
 Vue.use(Router)
 
@@ -60,21 +63,34 @@ export default new Router({
       }
     },
     {
-      path: '/component-communication',
-      name: 'ComponentCommunication',
-      components: {
-        default: ComponentCommunication,
-        header: TheHeader,
-        footer: TheFooter
-      }
-    },
-    {
       path: '/vue-router',
       name: 'VueRouter',
       components: {
         default: VueRouter,
         header: TheHeader,
         footer: TheFooter
+      }
+    },
+    {
+      path: '/nested-router',
+      name: 'NestedRouter',
+      component: UpperComponent,
+      children: [
+        {
+          path: 'lower',
+          component: LowerComponent
+        },
+        {
+          path: 'lower2',
+          component: LowerComponent2
+        }
+      ]
+    },
+    {
+      path: '/named-view',
+      name: 'NamedView',
+      components: {
+        default: NamedView,
       }
     },
   ]

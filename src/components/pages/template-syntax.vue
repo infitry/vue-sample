@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
       <h2>{{ message }}</h2>
-      <h2>reverse message : {{ reverseMessage }}</h2>
       <h2>v-bind</h2>
       <p v-bind:id="idA">아이디 바인딩 ID: {{ idA }}</p>
       <p v-bind:class="classA">클래스 바인딩</p>
@@ -13,8 +12,15 @@
       <ul>
         <li v-for="system in systems" v-bind:key="system">{{ system }}</li>
       </ul>
-      <h2>computed</h2>
+      <h2>v-model</h2>
       <input type="text" v-model="message"/>
+      <select v-model="selectBox">
+        <option v-bind:value="system" v-for="system in systems" v-bind:key="system">
+          {{ system }}
+        </option>
+      </select>
+      <h2>computed</h2>
+      <h2>reverse message : {{ reverseMessage }}</h2>
   </div>
 </template>
 
@@ -33,6 +39,7 @@ export default {
   data() {
     return {
       message: 'Hello Vue World!',
+      selectBox: [],
       idA: 'leesw',
       classA: 'yellow',
       styleA: 'color: red;',
