@@ -25,15 +25,7 @@
 </template>
 
 <script>
-// import Vue from 'vue'
-// const app2 = new Vue({
-//   el: '#app2',
-//   data() {
-//     return {
-//       message: '두 번째 인스턴스'
-//     }
-//   }
-// })
+
 export default {
   name: 'HelloWorld',
   data() {
@@ -60,6 +52,11 @@ export default {
   computed: {
     reverseMessage() {
      return this.message.split('').reverse().join('')
+    }
+  },
+  watch: {
+    message: function(data) {
+      console.log(`데이터의 값이 바뀝니다. ${data}`)
     }
   }
 }

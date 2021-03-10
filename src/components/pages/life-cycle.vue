@@ -41,11 +41,11 @@ export default {
     console.log('created.. / data, methods 있음, DOM 접근 불가')
   },
   beforeMount: function() {
-    //document.getElementById('dom').innerHTML = '<input type="text"/>' // dom 접근확인
+    // document.getElementById('dom').innerHTML = '<h1>Dom에 접근</h1>' // dom 접근확인
     console.log('beforeMount.. / render() 함수 호출 전 DOM 접근 불가')
   },
   mounted: function() {
-    document.getElementById('dom').innerHTML = '<input type="text"/>' // dom 접근 확인
+    // document.getElementById('dom').innerHTML = '<h1>Dom에 접근</h1>' // dom 접근 확인
     console.log('mounted.. / data, methods 있음, DOM 접근 가능')
   },
   beforeUpdate: function() {

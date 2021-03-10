@@ -10,8 +10,18 @@ Vue.component('dateComponent', Date) // 전역변수 예제
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 /* eslint-disable no-new */
+
 new Vue({
   router,
   components: { App },
   template: '<App/>'
 }).$mount('#app')
+
+// const app2 = new Vue({
+//   el: '#app2',
+//   data() {
+//     return {
+//       message: '두 번째 인스턴스'
+//     }
+//   }
+// })
