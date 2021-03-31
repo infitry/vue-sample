@@ -17,6 +17,9 @@ export default {
       dataList: []
     }
   },
+  mounted() {
+    this.getData()
+  },
   methods: {
     getData() {
       const th = this

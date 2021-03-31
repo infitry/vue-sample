@@ -1,6 +1,6 @@
 <template>
-    <div class="footer">
-        <h2>저는 푸터입니다.</h2>
+    <div class="header">
+        <h2>login</h2>
     </div>
 </template>
 

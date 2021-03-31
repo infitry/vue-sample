@@ -12,8 +12,8 @@ Vue.prototype.$axios = axios
 /* eslint-disable no-new */
 
 new Vue({
-  router,
   components: { App },
+  router,
   template: '<App/>'
 }).$mount('#app')
 
