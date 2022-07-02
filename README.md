@@ -1,4 +1,4 @@
-# vue-sample
+# vue.js 교육용자료
 
 > A Vue.js project
 
